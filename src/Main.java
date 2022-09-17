@@ -118,12 +118,12 @@ public class Main {
 	}
 	
 	private static void verticesIsolados() {
-		System.out.format("%n Vertices isolados: 0 %n %n" );
+		System.out.format("%nVertices isolados: 0 %n %n" );
 		
 	}
 	
 	private static void verticesExtremidade() {
-		System.out.format("%n 5 vértices de extremidade %n %n");
+		System.out.format("%nVértices de extremidade: 2 %n %n");
 		
 	}
 
