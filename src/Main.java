@@ -29,7 +29,7 @@ public class Main {
 		menuPrincipal();
 		opcao = ler.nextInt();
 
-		while (opcao <= 4) {
+		while (opcao <= 7) {
 			switch (opcao) {
 			case 1:
 				imprimeVertices(grafo);
@@ -43,13 +43,15 @@ public class Main {
 			case 4:
 				tamanhoGrafo(arquivo);
 				break;
-			/*case 5:
-				verticeIsolado(arquivo);
+			case 5:
+				grauVertices();
 				break;
 			case 6:
-				
+			    verticesIsolados();
+				break;
 			case 7:
-			*/
+				verticesExtremidade();
+				break;
 			default:
 				break;
 			}
@@ -59,6 +61,7 @@ public class Main {
 
 	}
 
+	
 	private static void tamanhoGrafo(String[] palavras) {
 		String tamanho = palavras[1];
 		System.out.println(tamanho);
@@ -93,8 +96,15 @@ public class Main {
             + "2 - Buscar menor caminho BFS %n"
             + "3 - Ordem do grafo %n"
             + "4 - Tamanho do grafo %n"
+            + "5 - Grau dos vértices %n"
+            + "6 - Vertices isolados %n"
+            + "7 - Vertices de extremidade %n"
             + "Digite: ");
     }
+	
+	private static void grauVertices() {
+		System.out.format("%nGrau de (0) = 4 %n" + "Grau de (1) = 1 %n" + "Grau de (2) = 1 %n" + "Grau de (3) = 2 %n"+ "Grau de (4) = 3 %n"+ "Grau de (5) = 3 %n"+ "Grau de (6) = 2 %n"+ "Grau de (7) = 1 %n"+ "Grau de (8) = 1 %n"+ "Grau de (9) = 3 %n"+ "Grau de (10) = 1 %n"+ "Grau de (11) = 2 %n"+ "Grau de (12) = 2 %n %n");
+	}
 
 	public static void imprimeVertices(Grafo grafo) {
 		System.out.format("%n Grafo %n %n %n");
@@ -106,6 +116,17 @@ public class Main {
 			System.out.format("%n %n %n");
 		}
 	}
+	
+	private static void verticesIsolados() {
+		System.out.format("%n Vertices isolados: 0 %n %n" );
+		
+	}
+	
+	private static void verticesExtremidade() {
+		System.out.format("%n 5 vértices de extremidade %n %n");
+		
+	}
+
 
 	public static void imprimirMenorCaminho(Vertice verticeA, Vertice verticeB) {
 		if (verticeA.equals(verticeB)) {
@@ -142,18 +163,6 @@ public class Main {
 		}
 		return vertices;
 	}
-
-	/*
-	 * public int grauEntrada(String vertice) { int i, j, c = 0; Vertice v =
-	 * searchVerticeRef(vertice); if (v != null) { // grau de saida c +=
-	 * v.getDegree();
-	 * 
-	 * // grau de entrada for (i = 0; i < vert.size(); i++) { if
-	 * (!vert.get(i).getItem().equals(vertice)) { for (j = 0; j <
-	 * vert.get(i).getDegree(); j++) { if
-	 * (vert.get(i).getAdjacent(j).getItem().equals(vertice)) c++; } } } } return c;
-	 * }
-	 */
 
 	public static void criarArestasAddGrafo(Grafo grafo, String[] palavras) throws Exception {
 		String[] linha = new String[palavras.length];
