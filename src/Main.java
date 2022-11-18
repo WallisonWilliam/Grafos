@@ -29,7 +29,7 @@ public class Main {
 		menuPrincipal();
 		opcao = ler.nextInt();
 
-		while (opcao <= 7) {
+		while (opcao <= 4) {
 			switch (opcao) {
 			case 1:
 				imprimeVertices(grafo);
@@ -42,15 +42,6 @@ public class Main {
 				break;
 			case 4:
 				tamanhoGrafo(arquivo);
-				break;
-			case 5:
-				grauVertices();
-				break;
-			case 6:
-			    verticesIsolados();
-				break;
-			case 7:
-				verticesExtremidade();
 				break;
 			default:
 				break;
