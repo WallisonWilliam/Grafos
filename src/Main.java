@@ -102,10 +102,6 @@ public class Main {
             + "Digite: ");
     }
 	
-	private static void grauVertices() {
-		System.out.format("%nGrau de (0) = 4 %n" + "Grau de (1) = 1 %n" + "Grau de (2) = 1 %n" + "Grau de (3) = 2 %n"+ "Grau de (4) = 3 %n"+ "Grau de (5) = 3 %n"+ "Grau de (6) = 2 %n"+ "Grau de (7) = 1 %n"+ "Grau de (8) = 1 %n"+ "Grau de (9) = 3 %n"+ "Grau de (10) = 1 %n"+ "Grau de (11) = 2 %n"+ "Grau de (12) = 2 %n %n");
-	}
-
 	public static void imprimeVertices(Grafo grafo) {
 		System.out.format("%n Grafo %n %n %n");
 		for (Vertice verticeAtual : grafo.getVertices()) {
@@ -117,17 +113,6 @@ public class Main {
 		}
 	}
 	
-	private static void verticesIsolados() {
-		System.out.format("%nVertices isolados: 0 %n %n" );
-		
-	}
-	
-	private static void verticesExtremidade() {
-		System.out.format("%nVértices de extremidade: 2 %n %n");
-		
-	}
-
-
 	public static void imprimirMenorCaminho(Vertice verticeA, Vertice verticeB) {
 		if (verticeA.equals(verticeB)) {
 			System.out.format("%s", verticeB, verticeB.getCustoAresta());
